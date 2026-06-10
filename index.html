@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    body { margin: 0; font-family: sans-serif; background: #222; color: white; }
+    .address-bar { height: 50px; display: flex; align-items: center; padding: 0 10px; gap: 10px; }
+    input { flex: 1; padding: 5px; border-radius: 4px; border: none; background: #444; color: white; }
+    button { padding: 5px 10px; background: rgb(128, 0, 0); color: white; border: none; border-radius: 80px; cursor: pointer; }
+    button:hover { background: rgb(190, 0, 0); }
+    button:active { background: rgb(255, 0, 0);}
+  </style>
+</head>
+<body>
+
+  <div class="address-bar">
+    <button id="back">←</button>
+    <input type="text" id="url-input" value="https://github.com" />
+    <button id="go">Go</button>
+  </div>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
