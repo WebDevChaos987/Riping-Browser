@@ -1,9 +1,0 @@
-{
-  "$schema": "../gen/schemas/capabilities.json",
-  "identifier": "main-capability",
-  "description": "Allow webview creation for Riping",
-  "windows": ["main"],
-  "permissions": [
-    "core:webview:allow-create-webview"
-  ]
-}
