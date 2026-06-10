@@ -12,7 +12,8 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        platform: [windows-latest]
+        # This tells GitHub to run the build twice: once on Windows and once on Mac!
+        platform: [windows-latest, macos-latest]
 
     runs-on: ${{ matrix.platform }}
     steps:
@@ -21,7 +22,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-level: 20
+          node-version: 20
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -35,5 +36,5 @@ jobs:
       - name: Upload Build Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: Riping-Browser-Windows
+          name: Riping-Browser-${{ matrix.platform }}
           path: src-tauri/target/release/bundle/
